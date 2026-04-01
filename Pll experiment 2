@@ -1,0 +1,34 @@
+#to study arithmetic relaton and logical operations and operators in python
+# to add two numbers in python
+a=2
+b=5
+c=a+b
+print(c)
+
+#to declare variable and display types of respective variable 
+a=10
+print(type(a))
+a=2.5
+print(type(a))
+a="hello"
+print(type(a))
+a='True'
+print(type(a))
+a=["gautam"]
+print(type(a))
+a=(gautami)
+print(type(a))
+a={"gautami"}
+print(type(a))
+a=set(1,2,3)
+print(type(a))
+
+#to demonstrate type casting in python
+a= 5
+ b=10
+ d=a/b
+ print ("before type casting":) 
+ print(type(d))
+ print ( "after type casting":)
+ print(type(d))
+ 
