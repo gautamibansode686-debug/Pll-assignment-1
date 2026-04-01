@@ -1,0 +1,31 @@
+#1) Sum of odd numbers from 1 to 10 (while loop
+sum_odd = 0
+a = 1
+
+while a <= 10:
+    sum_odd += a
+    a += 2
+
+print("Sum of odd numbers (1 to 10):", sum_odd)
+
+
+# 2) Fibonacci series from 0 to 50
+a, b = 0, 1
+
+print("Fibonacci series up to 50:")
+while a <= 50:
+    print(a, end=" ")
+    a, b = b, a + b
+
+print()
+
+
+# 3) Remove characters at odd index from a string
+s = input("Enter a string: ")
+result = ""
+
+for i in range(len(s)):
+    if i % 2 == 0:   # keep even index
+        result += s[i]
+
+print("String after removing odd index characters:", result)
