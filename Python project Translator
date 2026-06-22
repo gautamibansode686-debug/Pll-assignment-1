@@ -1,0 +1,36 @@
+from googletrans import Translator, LANGUAGES
+
+translator = Translator()
+
+print("=" * 40)
+print("      LANGUAGE TRANSLATOR")
+print("=" * 40)
+
+while True:
+    print("\nAvailable Languages:")
+    for code, language in LANGUAGES.items():
+        print(f"{code} -> {language.title()}")
+
+    lang_code = input("\nEnter language code (or 'close' to exit): ").lower()
+
+    if lang_code == "close":
+        print("Program Closed!")
+        break
+
+    if lang_code not in LANGUAGES:
+        print("Invalid language code!")
+        continue
+
+    text = input("\nEnter text to translate: ")
+
+    try:
+        translated = translator.translate(text, dest=lang_code)
+
+        print("\n" + "=" * 40)
+        print("Translated Text:")
+        print(translated.text)
+        print(f"Translated from: {LANGUAGES[translated.src].title()}")
+        print("=" * 40)
+
+    except Exception as e:
+        print("Error:", e)
